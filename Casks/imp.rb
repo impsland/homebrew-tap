@@ -1,6 +1,6 @@
 cask "imp" do
-  version "1.0.0"
-  sha256 "0af6ef34a58e7f611b1f02316a802254908a061836a88fe0955d25f52f2905b6"
+  version "1.0.2"
+  sha256 "18840c8a14cc07562f773027f7a73e0df18d6497f2d848c11259a9c2d8cf7329"
 
   url "https://github.com/impsland/imp/releases/download/v#{version}/Imp.zip"
   name "Imp"
@@ -16,7 +16,7 @@ cask "imp" do
 
   app "Imp.app"
 
-  # Imp is ad-hoc signed, not notarized: clear the download quarantine so Gatekeeper lets it open.
+  # Imp is signed with its own certificate, not notarized by Apple: clear the download quarantine so Gatekeeper lets it open.
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Imp.app"]
   end
