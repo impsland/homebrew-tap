@@ -1,6 +1,6 @@
 cask "imp" do
-  version "1.12.1"
-  sha256 "7ab91863fa807fdaeb94a794d57379ba1eac9302910ea5faa74c5c09edf7f250"
+  version "1.13.0"
+  sha256 "f26a01994ec07b8b09846410f89d7e82adfae3d558d80eb997ccf9700fec58e8"
 
   url "https://github.com/impsland/imp/releases/download/v#{version}/Imp.dmg"
   name "Imp"
